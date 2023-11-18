@@ -1,0 +1,36 @@
+from turtle import*
+colormode(225)
+bgcolor('pink')
+pencolor('white')
+speed(0)
+def curve():
+    for i in range(200):
+        right(1)
+        forward(1)
+def heart():
+    fillcolor('red')
+    begin_fill()
+    left(140)
+    forward(113)
+    curve()
+    left(120)
+    curve()
+    forward(112)
+    end_fill()
+heart()
+def write_text(message,pos):
+    x,y=pos
+    penup()
+    goto(x,y)
+    color('white')
+    style=('stencil std' ,18,'italic')
+    write(message,font=style)
+write_text('I',(-68,90))
+write_text('L',(-50,90))
+write_text('O',(-37,90))
+write_text('V',(-20,90))
+write_text('E',(-5,90))
+write_text('Y',(20,90))
+write_text('O',(35,90))
+write_text('U',(55,90))
+hideturtle()
